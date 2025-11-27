@@ -1,0 +1,73 @@
+/* A seção que "segura" o card, dando um espaçamento da tela */
+.section {
+  padding: 3rem 5%; /* Espaçamento em cima/baixo e laterais */
+  background-color: #f8f9fa; /* Um cinza bem claro para o fundo da seção */
+}
+
+/* O card principal */
+.card {
+  display: flex;
+  align-items: center; /* Alinha o texto e a imagem verticalmente */
+  max-width: 1100px; /* Largura máxima do card */
+  margin: 0 auto; /* Centraliza o card */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 16px; /* Bordas bem arredondadas */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  overflow: hidden; /* Garante que a imagem não vaze das bordas arredondadas */
+  gap: 2rem; /* Espaço entre imagem e texto */
+}
+
+/* Coluna da imagem */
+.imageContainer {
+  flex: 1; /* Ocupa metade do espaço */
+  max-width: 45%;
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Faz a imagem ocupar toda a altura do container */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Coluna do conteúdo */
+.content {
+  flex: 1; /* Ocupa a outra metade */
+  padding: 2rem 2.5rem; /* Espaçamento interno para o texto */
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #212529; /* Preto suave */
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: #495057; /* Cinza escuro */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* O último parágrafo de texto tem margem maior */
+.text:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #192a56; /* Azul bem escuro do seu design */
+  color: #ffffff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0d172e; /* Mais escuro no hover */
+  transform: translateY(-2px); /* Efeito leve de "levantar" */
+}

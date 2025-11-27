@@ -1,0 +1,56 @@
+.howItWorks {
+  padding: 4rem 5%; /* Espaçamento interno */
+  background-color: #ffffff; /* Fundo branco */
+  text-align: center; /* Centraliza os títulos */
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #495057;
+  max-width: 800px; /* Limita a largura do subtítulo */
+  margin: 0 auto 3rem auto; /* Centraliza e adiciona espaço abaixo */
+  line-height: 1.6;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: space-between; /* Distribui os 3 cards igualmente */
+  gap: 2rem; /* Espaço entre os cards */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o container dos cards */
+}
+
+.stepCard {
+  flex: 1; /* Faz cada card ocupar o mesmo espaço */
+  background-color: #f8f9fa; /* Fundo levemente cinza para o card */
+  border-radius: 12px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que a imagem se ajuste às bordas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.stepImage {
+  width: 100%;
+  height: 250px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Cobre o espaço sem distorcer */
+  display: block;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  padding: 1.5rem; /* Espaçamento interno para o título do card */
+}

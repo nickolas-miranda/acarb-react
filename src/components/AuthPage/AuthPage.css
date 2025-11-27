@@ -1,0 +1,242 @@
+/* src/components/AuthPage/AuthPage.css */
+
+/* Reset básico para garantir que ocupe a tela toda */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background-color: #f0f2f5;
+  position: relative;
+}
+
+/* Botão Voltar */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #666;
+  font-weight: 600;
+  z-index: 100;
+}
+
+/* --- LADO ESQUERDO (Formulário) --- */
+.auth-left {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdfdfd; /* Fundo levemente off-white */
+  z-index: 2;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  /* Sombra suave para destacar */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+  border-radius: 12px;
+}
+
+/* Logo */
+.car-logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.car-logo-placeholder {
+  font-size: 2rem;
+}
+
+/* Abas (Login / Cadastro) */
+.auth-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #888;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0056D2; /* Azul principal */
+}
+
+/* Inputs e Labels */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box; /* Importante para o padding não estourar */
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #0056D2;
+}
+
+/* Input de Senha com Olho */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+/* Input de Telefone (+55) */
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.phone-input:focus-within {
+  border-color: #0056D2;
+}
+
+.phone-input .country-code {
+  background: #f5f5f5;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  border-right: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.phone-input input {
+  border: none; /* Remove borda interna */
+  border-radius: 0;
+}
+
+/* Link Esqueceu Senha */
+.forgot-password {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #777;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Botão Principal */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #0056D2;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Arredondado como na imagem */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background-color: #0044a8;
+}
+
+/* --- LADO DIREITO (Imagem Background) --- */
+.auth-right {
+  width: 55%;
+  position: relative;
+  /* SUBSTITUA 'url' PELA SUA IMAGEM DA MECÂNICA */
+  /* Se não tiver, vai ficar azul. Coloque a imagem na pasta public ou assets */
+  background: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop') no-repeat center center;
+  background-size: cover;
+  
+  /* Clipe diagonal opcional para dar o efeito da imagem cortada */
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  margin-left: -50px; /* Sobrepõe levemente */
+}
+
+/* Overlay azulado opcional sobre a imagem */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,86,210,0.3), rgba(0,0,0,0.1));
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-left {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px; /* Espaço para botão voltar */
+  }
+  .auth-right {
+    display: none; /* Esconde a imagem no celular para focar no form */
+  }
+  .auth-card {
+    box-shadow: none;
+    background: transparent;
+  }
+}

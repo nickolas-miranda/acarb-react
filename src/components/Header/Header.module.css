@@ -1,0 +1,86 @@
+/* Container principal do header */
+.header {
+  width: 100%;
+  padding: 1rem 5%; /* 1rem de padding em cima/baixo, 5% nas laterais */
+  background-color: #0d47a1; /* Um azul escuro, ajuste para a cor exata do Figma */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  
+  /* Para fixar no topo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que fique acima de outros conteúdos */
+}
+
+/* Container da navegação interna */
+.nav {
+  display: flex;
+  justify-content: space-between; /* Joga o logo para um lado e os links para o outro */
+  align-items: center;
+  width: 100%;
+  /* max-width: 1200px; Limita a largura do conteúdo em telas grandes */
+  margin: 0 auto; /* Centraliza o container .nav */
+}
+
+/* Estilo do Logo */
+.logoLink {
+  display: flex; /* Garante que o link se comporte como um container para a imagem */
+  align-items: center; /* Centraliza a imagem verticalmente dentro do link */
+  height: 100%; /* Ajusta a altura do link para o nav */
+}
+
+/* Novo estilo para a imagem do logo */
+.logoImage {
+  height: 25px; /* Ajuste a altura do logo conforme seu design no Figma */
+  width: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços extras comuns em imagens */
+}
+/* Lista de links */
+.navList {
+  display: flex;
+  list-style: none; /* Remove bolinhas da lista */
+  margin: 0;
+  padding: 0;
+  gap: 2rem; /* Espaçamento entre os links */
+}
+
+/* Links individuais */
+.navLink {
+  color: #ffffff; /* Branco */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.3s ease; /* Efeito suave no hover */
+}
+
+/* Efeito ao passar o mouse */
+.navLink:hover {
+  color: #bbdefb; /* Um azul claro para o hover */
+}
+/* ... seus estilos existentes ... */
+
+/* Estilo para o botão de Entrar */
+.loginButton {
+  background-color: #0056D2; /* Azul principal */
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px; /* Borda arredondada */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-left: 20px; /* Separa um pouco do menu */
+}
+
+.loginButton:hover {
+  background-color: #003f9a; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Opcional: Para garantir que o Nav alinhe tudo corretamente */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* ... outros estilos que você já tenha */
+}
